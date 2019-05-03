@@ -26,3 +26,37 @@ int main(){
 	}
 	return 0;
 }
+
+
+
+#include<stdio.h>
+
+int main()
+{
+	int i, n;
+	printf("\nNhap n: ");
+	scanf("%d", &n);
+
+	if(n < 2)
+		printf("So %d khong phai la so nguyen to\n", n);
+	else if(n == 2)
+		printf("So %d la so nguyen to\n", n);
+	else if(n % 2 == 0)
+		printf("So %d khong phai la so nguyen to\n", n);
+	else
+	{
+		for(i = 3; i <= n; i=i+1)
+		{
+			if(n % i == 0)
+	  	break;
+		}
+		if(i == n)
+			printf("\nSo %d la so nguyen to", n);
+		else
+			printf("\nSo %d khong phai la so nguyen to", n);
+	}
+		
+
+
+	return 0;
+}
